@@ -1,0 +1,35 @@
+.product-card {
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+
+.actions {
+  margin-top: 10px;
+  display: flex;
+  justify-content: end;
+  margin-bottom: 10px;
+}
+
+.edit-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #337ab7;
+}
+
+.edit-button i {
+  font-size: 18px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+img {
+  object-fit: cover;
+}

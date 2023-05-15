@@ -1,0 +1,22 @@
+<!-- HeaderComponent HTML template -->
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+  <a class="navbar-brand" routerLink="/">openfabric</a>
+  <ul class="navbar-nav ml-auto">
+    <li class="nav-item">
+      <a class="nav-link" *ngIf="isLoggedIn()"  routerLink="/product/form">Add Product</a>
+    </li>
+    <ng-container *ngIf="!isLoggedIn(); else loggedInSection">
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signin">Sign In</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/signup">Sign Up</a>
+      </li>
+    </ng-container>
+    <ng-template #loggedInSection>
+      <li class="nav-item">
+        <a class="nav-link" (click)="logout()">Sign Out</a>
+      </li>
+    </ng-template>
+  </ul>
+</nav>
